@@ -68,7 +68,7 @@ def run(db, schema, username):
     except FileNotFoundError:
         last_dbf_url = ''
 
-    if last_dbf_url != dbf_rar_url:
+    if last_dbf_url == dbf_rar_url:
         #print('using already downloaded [{}]'.format(dbf_rar_url))
         print('no updates available')
         return
