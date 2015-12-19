@@ -96,7 +96,7 @@ def run(db, schema, username):
             cmd = 'psql'
             if username != '-':
                 cmd += ' -U ' + username
-            cmd += ' {} < {}'.format(username, db, sql)
+            cmd += ' {} < {}'.format(db, sql)
             shell_cmd('executing [{}]...'.format(cmd), cmd)
 
             m = re.match(r'^([A-Z]+)\d+', dbf)
